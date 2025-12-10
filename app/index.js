@@ -1,7 +1,7 @@
 const express = require ("express");
 const app = express();
 require ('dotenv').config();
-const routeHandler = require('./routes');
+const routeHandler = require('./routes/routes.api');
 
 
 app.get ( "/", (req, res ) => {

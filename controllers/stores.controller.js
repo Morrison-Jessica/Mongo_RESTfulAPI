@@ -23,7 +23,7 @@ exports.getStores = async (req, res) => {
 };
 
 // Get one store
-exports.getStore = async (req, res) => {
+exports.getStoreById = async (req, res) => {
   try {
     const store = await Store.findById(req.params.id);
     res.json(store);

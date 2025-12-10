@@ -8,8 +8,8 @@ const express = require('express');
 const router = express.Router();
 
 // Import each route group
-const storeRoutes = require('./routes.stores');
-const productRoutes = require('./routes.products');
+const storeRoutes = require('./storeRoutes');
+const productRoutes = require('./productRoutes');
 
 // Map them under a single API prefix
 router.use('/stores', storeRoutes);      // -> /api/v1/stores
