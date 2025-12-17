@@ -15,7 +15,8 @@ const ProductSchema = new mongoose.Schema({
   },
   category: {
     type: String,
-    enum: ["food", "clothing", "electronics"],  // Only allowed values
+    enum: ["food", "clothing", "electronics", "beauty"],  // Only allowed values
+    lowercase: true,
   },
   store: {
     type: mongoose.Schema.Types.ObjectId,        // Reference to Store

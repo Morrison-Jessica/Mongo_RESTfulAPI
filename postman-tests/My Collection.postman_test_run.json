@@ -1,0 +1,126 @@
+{
+	"id": "c11aca68-a80b-4934-8c12-a987d18ab311",
+	"name": "My Collection",
+	"timestamp": "2025-12-17T00:09:49.892Z",
+	"collection_id": "50465963-6b29cd95-7934-4426-97fe-33583c783971",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 9,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-12-17T00:09:49.669Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "db0e8ae8-4d21-4163-8252-05c08f10d4a7",
+			"name": "Get Products",
+			"url": "http://localhost:3000/api/v1/products",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Response body is not empty": true,
+				"Returns 2 products max": true,
+				"Products belong to a store": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body is not empty": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returns 2 products max": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Products belong to a store": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Response body is not empty": true,
+					"Returns 2 products max": true,
+					"Products belong to a store": true
+				}
+			]
+		},
+		{
+			"id": "d3158b45-df74-46c2-bf41-833d741a4b39",
+			"name": "GET Stores",
+			"url": "http://localhost:3000/api/v1/stores",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Response is an array": true,
+				"Returns 3 stores max": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response is an array": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returns 3 stores max": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Response is an array": true,
+					"Returns 3 stores max": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 21,
+	"collection": {
+		"requests": [
+			{
+				"id": "db0e8ae8-4d21-4163-8252-05c08f10d4a7",
+				"method": "GET"
+			},
+			{
+				"id": "d3158b45-df74-46c2-bf41-833d741a4b39",
+				"method": "GET"
+			}
+		]
+	}
+}

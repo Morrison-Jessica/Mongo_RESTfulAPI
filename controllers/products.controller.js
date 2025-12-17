@@ -63,3 +63,17 @@ exports.deleteProduct = async (req, res) => {
     res.status(400).json({ message: 'Invalid ID' });
   }
 };
+
+// GET /api/v1/products?page=1&limit=2
+exports.getProducts = async (req, res) => {
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 2;
+  const skip = (page - 1) * limit;
+
+  const products = await Product.find()
+    .skip(skip)
+    .limit(limit);
+
+  res.status(200).json(products);
+};
+
