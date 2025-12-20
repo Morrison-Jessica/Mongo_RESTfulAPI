@@ -1,4 +1,5 @@
 // server.js
+import cors from 'cors';
 
 // Load environment variables
 require('dotenv').config();
@@ -6,6 +7,7 @@ require('dotenv').config();
 // Import express
 const express = require('express');
 const app = express();
+
 
 // Morgan logs requests (GET/POST/PUT/DELETE)
 const morgan = require('morgan');
@@ -15,6 +17,9 @@ const mongoose = require('mongoose');
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+
+// Allow requests from any origin (safe for local dev)
+app.use(cors());
 
 // Middleware for logging
 app.use(morgan('dev'));
