@@ -59,7 +59,7 @@ exports.deleteStore = async (req, res) => {
 // GET /api/v1/stores?page=1&limit=3
 exports.getStores = async (req, res) => {
   const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 3;
+  const limit = parseInt(req.query.limit) || 5;
   const skip = (page - 1) * limit;
 
   const stores = await Store.find()
